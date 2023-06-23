@@ -19,6 +19,10 @@ body {
   padding: 20px;
   min-width: 500px;
   justify-content: space-between;
+  transition: all .2s ease; 
+}
+.post:hover {
+  transform: scale(1.01);
 }
 .post__text {
   display: flex;
@@ -28,8 +32,57 @@ body {
 .close {
   display: block;
   cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+.close:hover {
+  animation: close-shake .3s infinite;
+}
+
+@keyframes close-shake {
+  0% {
+    transform:rotate(-10deg)
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+ 100% {
+    transform: rotate(-10deg);
+  }
 }
 
 .description {
   color: rgba(0, 0, 0, 0.493);
+}
+
+.add-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 23px;
+}
+
+.search {
+  width: 99%;
+}
+
+.add-form, 
+.search,
+.posts {
+  margin-bottom: 20px;
+}
+
+.posts__text {
+  text-align: center;
+}
+.sort {
+  display: flex;
+  align-items: center;
+}
+.sort label {
+  margin-right: 10px;
+}
+.button_delete {
+  display: flex;
+  justify-content: flex-end;
 }
